@@ -15,6 +15,7 @@ source_group(TREE "${PROJECT_SOURCE_DIR}" PREFIX "Header Files" FILES ${HEADER_F
 source_group(TREE "${PROJECT_SOURCE_DIR}" PREFIX "Source Files" FILES ${SRC_FILES})
 
 include_directories(${PROJECT_SOURCE_DIR}/mspack)
+target_include_directories(mspack PUBLIC "${PROJECT_SOURCE_DIR}/mspack")
 
 if (BUILD_SHARED_LIBS)
   add_library(mspack SHARED ${HEADER_FILES} ${SRC_FILES})
